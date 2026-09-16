@@ -56,7 +56,7 @@ Bukti berhasilnya terhubung:
 
 ## Nomor 3
 
----
+Diminta untuk memastikan seluruh client yang berada di bawah Switch 1, Switch 2, dan Switch 3 dapat saling terhubung dan berkomunikasi setelah router terhubung ke internet.
 
 Dikarenakan di config router tadi sudah menambahkan
 
@@ -67,4 +67,12 @@ up sysctl -w net.ipv4.ip_forward=1
 Dimana perinah ini berguna memang untuk memforward routing dari satu client ke client lainnya.
 Dan juga, di seluruh client sudah di atur ip nya sesuai dengan prefix (10.82.x.1).
 
-Bukti keberhasilannya
+![Bukti Ping Mika](assets/3-switch1.png)
+![Bukti Ping Chisa](assets/3-switch2.png)
+![Bukti Ping Knights](assets/3-switch3.png)
+
+10.82.1.2 = Switch 1
+10.82.2.2 = Switch 2
+10.82.3.2 = Switch 3
+
+Mika kan berada di switch 1 jadi dilakukan ping untuk ip switch 2 dan 3, begitu juga yang lainnya, dilakukan ping untuk mengecek koneksi di switch yang lain
