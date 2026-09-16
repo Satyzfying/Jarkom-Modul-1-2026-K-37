@@ -76,3 +76,28 @@ Dan juga, di seluruh client sudah di atur ip nya sesuai dengan prefix (10.82.x.1
 10.82.3.2 = Switch 3
 
 Mika kan berada di switch 1 jadi dilakukan ping untuk ip switch 2 dan 3, begitu juga yang lainnya, dilakukan ping untuk mengecek koneksi di switch yang lain
+
+## Nomor 4
+
+---
+
+Untuk NAT Masquerades sudah di setup sebelumnya di router
+
+```bash
+up iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+
+Tinggal bagian DNS Resolver,
+![Mika](assets/4-mika.png)
+
+Awalnya dicoba untuk ping google.com dan ternyata masih belum bisa, lalu dilakukan pemasangan DNS resolver dengan cara memasukkan command
+```bash
+ip dns 8.8.8.8
+```
+Setelah itu coba ping google.com dan sudah berhasil
+
+Bukti untuk client lainnya:
+![Alice](assets/4-alice.png)
+![Chisa](assets/4-chisa.png)
+![Eiri](assets/4-eiri.png)
+![Knights](assets/4-knights.png)
