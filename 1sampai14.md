@@ -1,0 +1,70 @@
+# Laporan Sementara Modul 1
+
+## Nomor 1
+
+---
+![Topology Nomor 1](assets/no1topology.png)
+
+Router (lain) disini menggunakan debinet
+
+config di router :
+Konfigurasi IP tersebut dimasukkan pada *router* sebagai berikut (prefix kelompok adalah 10.82.x.x):
+
+```bash
+# Config eth1
+auto eth1
+iface eth1 inet static
+    address 10.82.1.1
+    netmask 255.255.255.0
+
+# Config eth2
+auto eth2
+iface eth2 inet static
+    address 10.82.2.1
+    netmask 255.255.255.0
+
+# Config eth3
+auto eth3
+iface eth3 inet static
+    address 10.82.3.1
+    netmask 255.255.255.0
+```
+
+Bukti kalau router sudah berhasil meneruskan data antar switch (subnet) Disini VPCS Alice melakukan ping ke IP nya VPCS Chisa:
+![alicepingchisa](assets/1-alicepingchisa.png)
+
+## Nomor 2
+
+---
+
+![nat added to topology](assets/2-nattopology.png)
+
+(NAT menggunakan eth0 di router sesuai instruksi pada soal)
+
+Config di router untuk NAT:
+
+```bash
+# Config eth0 
+auto eth0
+iface eth0 inet dhcp
+    up sysctl -w net.ipv4.ip_forward=1
+    up iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+Bukti berhasilnya terhubung:
+![alt text](image.png)
+
+
+## Nomor 3
+
+---
+
+Dikarenakan di config router tadi sudah menambahkan
+
+```bash
+up sysctl -w net.ipv4.ip_forward=1
+```
+
+Dimana perinah ini berguna memang untuk memforward routing dari satu client ke client lainnya.
+Dan juga, di seluruh client sudah di atur ip nya sesuai dengan prefix (10.82.x.1).
+
+Bukti keberhasilannya
