@@ -160,6 +160,12 @@ Terdapat beberapa paket yang muncul dari filter:
 ---
 
 ### Revisi
+Kendala saat demo: Pada saat demo sebelumnya, pengujian FTP gagal karena *node* GNS3 sempat dimatikan/di-restart. Hal ini menyebabkan sistem kembali ke *state* awal (bersih), sehingga konfigurasi user (`alice`, `mika`, `eiri`), konfigurasi `vsftpd`, dan aplikasi `ftp` client terhapus. Solusinya adalah menjalankan ulang *script* instalasi dan konfigurasi di node Chisa, serta menginstal kembali aplikasi `ftp` di node klien (Alice & Eiri) sebelum melakukan demo.
+
+Berikut adalah bukti dokumentasi keberhasilan setelah konfigurasi ulang:
+
+![Bukti Revisi FTP Nomor 7](assets/7-revisi.png)
+
 
 Akses yang harus diterapkan adalah:
 - alice memiliki hak akses read dan write.
