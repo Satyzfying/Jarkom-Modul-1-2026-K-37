@@ -159,6 +159,8 @@ Terdapat beberapa paket yang muncul dari filter:
 
 ---
 
+### Revisi
+
 Akses yang harus diterapkan adalah:
 - alice memiliki hak akses read dan write.
 - mika dibatasi hanya read-only.
@@ -228,6 +230,8 @@ Bukti Alice punya akses write:
 
 ---
 
+### Revisi
+
 Jadi disini disuruh melakukan FTP client dari Knights ke FTP Server Chisa menggunakan akun alice.
 
 digunakan dengan command
@@ -247,6 +251,8 @@ Dapat ditemukan:
 ## Nomor 9
 
 ---
+
+### Revisi
 
 Untuk memvalidasi konfigurasi read-only pada user mika, dilakukan pengujian akses FTP dari node Mika ke server Chisa.
 
@@ -286,6 +292,8 @@ Sedangkan saat server Chisa membalas (Echo reply) ke node Knights, nilai ICMP Ty
 ## Nomor 11
 
 ---
+
+### Revisi
 
 Install telnet terlebih dahulu
 ```bash
@@ -342,6 +350,8 @@ Analisis:
 ## Nomor 13
 
 ---
+
+### Revisi
 
 1. Siapkan akun di Knights
 ```bash
