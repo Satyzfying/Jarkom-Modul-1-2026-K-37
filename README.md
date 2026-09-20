@@ -9,6 +9,32 @@
 
 
 
+
+## Daftar Isi
+
+- [Nomor 1](#nomor-1)
+- [Nomor 2](#nomor-2)
+- [Nomor 3](#nomor-3)
+- [Nomor 4](#nomor-4)
+- [Nomor 5](#nomor-5)
+- [Nomor 6](#nomor-6)
+- [Nomor 7 🔄 *(Revisi)*](#nomor-7)
+- [Nomor 8 🔄 *(Revisi)*](#nomor-8)
+- [Nomor 9 🔄 *(Revisi)*](#nomor-9)
+- [Nomor 10](#nomor-10)
+- [Nomor 11 🔄 *(Revisi)*](#nomor-11)
+- [Nomor 12](#nomor-12)
+- [Nomor 13 🔄 *(Revisi)*](#nomor-13)
+- [14. Web Brute Force](#14-web-brute-force)
+- [15. Analisis wired_usb_hid.pcap](#15-analisis-wired_usb_hidpcap)
+- [16. Analisis FTP Theft](#16-analisis-ftp-theft)
+- [17 HTTP C2](#17-http-c2)
+- [18. SMB](#18-smb)
+- [19 SMTP](#19-smtp)
+- [20 TLS](#20-tls)
+
+---
+
 # Laporan Sementara Modul 1
 
 ## Nomor 1
